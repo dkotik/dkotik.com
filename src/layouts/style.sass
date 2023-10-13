@@ -1,0 +1,105 @@
+
+$primary: #4f79b8
+
+@import "bulma/utilities/_all"
+@import "bulma/base/_all"
+@import "bulma/elements/_all"
+// @import "bulma/components/_all"
+@import "bulma/grid/_all"
+@import "bulma/layout/_all"
+
+main
+  padding-top: 3rem
+  padding-bottom: 5rem
+
+  hr
+    border: 0
+    padding: 0 !important
+
+a, h1 a, h2 a
+  color: #426390
+
+p > a, .books a
+  border-bottom: 1px dashed #6b69de
+
+a:hover, h1 a:hover, h2 a:hover
+  color: #107bd6
+
+#logo
+  background-color: #3E7A5A
+  padding-top: 3rem
+  // color: white
+
+  a
+    @extend .container
+    color: white
+    font-weight: bold
+    display: block
+
+body.frontpage
+
+  #logo
+    padding-top: 40vh
+    padding-bottom: 2rem
+    // min-height: 200px
+    // height: 50vh
+    // background-color: #3E7A5A
+    background-image: url('./img/frontpage.jpg')
+    // background-position: center center
+    background-size: cover
+    background-position: center bottom
+
+  hr
+    display: block
+
+  .books
+    font-size: 80%
+    margin-bottom: 7rem
+
+    img
+      display: block
+      width: 100%
+
+#tagline
+  // background-color: #3E7A5A
+  background-color: #246947
+  // background-color: #6E3E7A
+
+  a
+    @extend .container
+    display: block
+    color: white
+    padding-top: 1rem
+    padding-bottom: 1rem
+
+footer
+  color: #4f79b8
+  clear: both
+  // font-size: 1em
+  background-color: #bec3c9
+  padding: 1.5em 0em 1.3em 0em
+  border-bottom: 0.5rem solid $primary
+
+footer
+    .container
+        text-align: center
+
+// footer a
+//   color: #426390
+
+// footer a:hover , #footer .active a
+//   color: #107bd6
+
+body
+    background-color: rgb(217, 217, 217)
+    color: #161616
+
+main, footer .container, #logo a, #tagline a
+    max-width: 45rem
+    margin: 0 auto
+
+// main
+//     img
+//         float: left
+//         padding: 0 2rem 0.5rem 0
+//         max-width: 6rem

@@ -1,0 +1,27 @@
+{{ template `templates/page.tmpl` . }}
+
+{{ define `main` }}
+{% block head %}{{ super() }}<script type="text/javascript" src="scripts.min.js"></script>{% endblock %}
+<h1>Send Email</h1>
+<form id="scyonalert" action="https://rsmdmdrwi5.execute-api.us-east-1.amazonaws.com/dev/queue/alert" is="async">
+  <fieldset>
+    <input name="csrf" value="blank" type="hidden" />
+    <div class="row margin-bottom">
+      <section class="column">
+        <label for="message" class="required">Message</label>
+        <textarea class="input" type="" name="message" style="min-height:30rem"></textarea>
+      </section>
+      <section class="column">
+        <label for="name" class="required">Your Name</label>
+        <input class="input" type="text" name="name" />
+        <label for="email" class="required">Email Address</label>
+        <input class="input" type="text" name="email" />
+        <label for="phone">Telephone Number</label>
+        <input class="input" type="text" value="" name="phone" />
+        <button class="button" type="submit" value="send" name="action">Send Message</button>
+      </section>
+    </div>
+  </fieldset>
+</form>
+<script type="text/javascript">var vueAlert = new Vue({el: 'form#scyonalert'});</script>
+{{ end }}

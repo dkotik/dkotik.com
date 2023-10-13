@@ -1,0 +1,13 @@
+{{ define `book` }}
+<h2>{{ .title }}</h2>
+<div class="columns">
+  <div class="column is-one-fifth">
+    <a href="{{ .url }}">
+    <img alt="{{ .title }}" src="{{ .img }}" /></a>
+    <!-- generate 3D book images here: https://3d-book-css.netlify.app/  -->
+  </div>
+  <div class="column">
+    {{ .description }} <a href="{{ .url }}">Order on Amazon.</a>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en">
+<head>
+{{ template "head" . }}
+</head>
+<body class="frontpage">
+  <div id="logo"><a href="/">dima kotik</a></div>
+  <div id="tagline"><a href="/">Life coach, historian, tech enthusiast.</a></div>
+<main class="content">
+{{ block `main` . }}
+    {{- .content -}}
+    <hr />
+    <h1>Books</h1>
+    {{ range .books }}
+    {{ template "book" . }}
+    {{ end }}
+{{ end }}
+</main>
+{{ template "foot" . }}
+</body></html>

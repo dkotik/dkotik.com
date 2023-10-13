@@ -1,0 +1,16 @@
+{
+  "name": "dkotik.com",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --port 8081 --watch",
+    "start": "astro dev --port 8081",
+    "build": "astro build",
+    "preview": "astro preview --port 8081 --watch",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.3.0",
+    "dependencies": "^0.0.1"
+  }
+}

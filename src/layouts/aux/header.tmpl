@@ -1,0 +1,21 @@
+{{ define `head` }}
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>{{ .title }}</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<meta name="title" content="{{ .title }}" />
+<meta name="description" content="{{ .description }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="keywords" content="{{ .keywords }}" />
+<link rel="image_src" href="/static/img/share.png" />
+<meta property="og:image" content="/static/img/share.png" name="og:image"/>
+<meta property="fb:app_id" content="966242223397117" name="fb:app_id" />
+<meta property="og:description" content="{{ .description }}" name="og:description" />
+<meta property="og:url" content="https://dkotik.com/" name="og:url" />
+<meta property="og:type" content="website" name="og:type" />
+<meta property="og:title" content="{{ .title }}" name="og:title" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .title }}" />
+<meta name="twitter:description" content="{{ .description }}" />
+<meta name="twitter:image" content="/static/img/share.png" />
+<link rel="stylesheet" href="/static/style.css" />
+{{ end }}
