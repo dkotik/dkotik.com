@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+  url: string;
+  img: string;
+}
+---
+
+<h2>{ Astro.props.title }</h2>
+<section>
+  <div class="image">
+    <a href={ Astro.props.url }>
+    <img alt={ Astro.props.title } src={ Astro.props.img } /></a>
+    <!-- generate 3D book images here: https://3d-book-css.netlify.app/  -->
+  </div>
+  <div class="description">
+    <slot />
+    <a href={ Astro.props.url }>Order on Amazon</a>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: max(10em, 20%) 1fr;
+    font-family: sans-serif;
+    line-height: 120%;
+  }
+
+  .image {
+    padding: 1em 1.5em 1em 0;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .description a {
+    /* display: block;
+    margin: 0 auto;
+    width: 23%; */
+    border-radius: 0.4em;
+    color: white;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgb(152, 77, 247);
+    padding: 0.7em 0.9em 0.5em 0.9em;
+  }
+</style>

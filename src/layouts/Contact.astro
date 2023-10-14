@@ -1,7 +1,6 @@
 {{ template `templates/page.tmpl` . }}
 
 {{ define `main` }}
-{% block head %}{{ super() }}<script type="text/javascript" src="scripts.min.js"></script>{% endblock %}
 <h1>Send Email</h1>
 <form id="scyonalert" action="https://rsmdmdrwi5.execute-api.us-east-1.amazonaws.com/dev/queue/alert" is="async">
   <fieldset>
@@ -23,5 +22,4 @@
     </div>
   </fieldset>
 </form>
-<script type="text/javascript">var vueAlert = new Vue({el: 'form#scyonalert'});</script>
 {{ end }}

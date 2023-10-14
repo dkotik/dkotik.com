@@ -174,7 +174,16 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		
+		"pages": {
+"index.md": {
+	id: "index.md";
+  slug: "index";
+  body: string;
+  collection: "pages";
+  data: any
+} & { render(): Render[".md"] };
+};
+
 	};
 
 	type DataEntryMap = {
