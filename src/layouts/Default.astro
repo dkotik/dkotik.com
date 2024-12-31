@@ -6,46 +6,52 @@ interface Props {
   class: string;
 }
 
-import Navigation from "./fragments/navigation.astro"
+import Navigation from "./fragments/navigation.astro";
 /* import HeadMeta from "./fragments/headmeta.astro" */
 /* <HeadMeta
 title={Astro.props.title}
 description={Astro.props.description}
 keywords={Astro.props.keywords}
 /> */
-import './style.sass'
+import "./style.sass";
 ---
+
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{ Astro.props.title }</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="title" content={ Astro.props.title } />
-    <meta name="description" content={ Astro.props.description } />
+    <title>{Astro.props.title}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="title" content={Astro.props.title} />
+    <meta name="description" content={Astro.props.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content={ Astro.props.keywords } />
+    <meta name="keywords" content={Astro.props.keywords} />
     <link rel="image_src" href="/img/share.png" />
-    <meta property="og:image" content="/img/share.png" name="og:image"/>
+    <meta property="og:image" content="/img/share.png" name="og:image" />
     <meta property="fb:app_id" content="966242223397117" name="fb:app_id" />
-    <meta property="og:description" content={ Astro.props.description } name="og:description" />
+    <meta
+      property="og:description"
+      content={Astro.props.description}
+      name="og:description"
+    />
     <meta property="og:url" content="https://dkotik.com/" name="og:url" />
     <meta property="og:type" content="website" name="og:type" />
-    <meta property="og:title" content={ Astro.props.title } name="og:title" />
+    <meta property="og:title" content={Astro.props.title} name="og:title" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={ Astro.props.title } />
-    <meta name="twitter:description" content={ Astro.props.description } />
+    <meta name="twitter:title" content={Astro.props.title} />
+    <meta name="twitter:description" content={Astro.props.description} />
     <meta name="twitter:image" content="/img/share.png" />
   </head>
   <body class={Astro.props.class || "page"}>
     <slot name="hero">
-      { Astro.props.class === "frontpage"
-          ?
-            <div id="logo"></div>
-            <div style="float: right; margin: 0 1em 1em 1em">
-            </div>
-          : ""
+      {
+        Astro.props.class === "frontpage" ? (
+          <div id="logo" />
+        ) : (
+          // <div style="float: right; margin: 0 1em 1em 1em;">
+          // </div>
+          ""
+        )
       }
-
     </slot>
     <main class="container">
       <section class="content">
@@ -60,9 +66,7 @@ import './style.sass'
     overscroll-behavior: none;
   }
 
-  body {
-    border: 0;
-    padding: 0;
-    margin: 0;
+  * {
+    box-sizing: border-box;
   }
 </style>

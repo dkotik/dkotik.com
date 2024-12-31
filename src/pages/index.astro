@@ -11,13 +11,11 @@ import Default from "../layouts/Default.astro";
 >
   <h1>Dima Kotik</h1>
 
-  <p>
-    I am a free open source software enthusiast, specializing in <a
-      target="_blank"
-      href="https://go.dev/">#Golang</a
-    >.
-  </p>
-  <p>I live in Kyiv, Ukraine.</p>
+  <ul>
+    <li>A free open source software enthusiast.</li>
+    <li>A <a target="_blank" href="https://go.dev/">#Golang</a> specialist.</li>
+    <li>A Kyiv resident.</li>
+  </ul>
 
   <!-- <h1 style="margin-top: 2.5em;">Books</h1>
 
@@ -58,7 +56,20 @@ import Default from "../layouts/Default.astro";
   </Book> -->
 
   <!-- <h1>Contact</h1> -->
-  <a target="_blank" href="https://bsky.app/profile/dkotik.com">🦋 Blue Sky</a>
+  <ul class="links">
+    <li><a target="_blank" href="https://github.com/dkotik">🚀 Github</a></li>
+    <li>
+      <a target="_blank" href="https://bsky.app/profile/dkotik.com"
+        >🦋 Blue Sky</a
+      >
+    </li>
+  </ul>
+  <hr />
+  <p>
+    I maintain software libraries that ensure durable, reliable, secure, and
+    continual operation of software systems that support civilization and human
+    flourishing.
+  </p>
   <!-- <ul>
     <li>
     </li>
@@ -88,15 +99,26 @@ import Default from "../layouts/Default.astro";
   h1 {
     font-family: sans-serif;
     font-size: 2em;
+    margin-bottom: 0;
   }
 
-  ul {
+  ul.links {
     font-family: sans-serif;
     display: flex;
     gap: 2em;
+    list-style: none;
+    padding: 0;
   }
 
-  ul a {
+  h1 + ul > li {
+    font-size: 110%;
+  }
+
+  ul.link li {
+    padding: 0;
+  }
+
+  a {
     text-decoration: none;
   }
 
