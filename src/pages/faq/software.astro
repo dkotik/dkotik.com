@@ -1,6 +1,7 @@
 ---
-import Default from "../layouts/Default.astro";
+import Default from "../../layouts/Default.astro";
 // import Book from "../layouts/Book.astro";
+import ButtonLedge from "../../layouts/fragments/buttonledge.astro";
 ---
 
 <Default
@@ -27,13 +28,14 @@ import Default from "../layouts/Default.astro";
   </p>
 
   <p>
-    Actually, we do know. Consequitive software updates turn devices into
-    surviallance apparatus.
+    But, we can surmise from past experience: consequitive software updates turn
+    devices into surviallance apparatus.
   </p>
 
-  <aside>
-    <a class="button" href="/" title="back to home page">Back</a>
-  </aside>
+  <ButtonLedge>
+    <a href="/why" title="return to previous explanation">Previous</a>
+    <!-- <a href="/faq/software" title="return to home page">Next</a> -->
+  </ButtonLedge>
 </Default>
 
 <style>

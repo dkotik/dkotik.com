@@ -1,5 +1,6 @@
 ---
 import Default from "../layouts/Default.astro";
+import ButtonLedge from "../layouts/fragments/buttonledge.astro";
 // import Book from "../layouts/Book.astro";
 ---
 
@@ -41,9 +42,10 @@ import Default from "../layouts/Default.astro";
     open-source software for things that are essential for well-being.
   </p>
 
-  <aside>
-    <a class="button" href="/" title="back to home page">Back</a>
-  </aside>
+  <ButtonLedge>
+    <a href="/" title="return to home page">Previous</a>
+    <a href="/faq/software" title="return to home page">Next</a>
+  </ButtonLedge>
 </Default>
 
 <style>
