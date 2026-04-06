@@ -1,0 +1,80 @@
+---
+import Default from "../layouts/Default.astro";
+import ButtonLedge from "../layouts/fragments/buttonledge.astro";
+---
+
+<Default
+  title="Contact Dima Kotik."
+  description="Social media links and contact form to reach Dima Kotik."
+  keywords="dkotik dima kotik contact social links"
+  class="frontpage"
+>
+  <h1>Contact</h1>
+
+  <p>
+    The following are my personal social media accounts.
+    In 2024 and 2025 I was cautioned by my church to no longer make public
+    statements, even if factual, that make government officials look bad.
+    I emptied every account of content, except for Twitter, which kept
+    264 re-tweets by glitch.
+  </p>
+
+  <ul class="links">
+    <li><a target="_blank" href="https://github.com/dkotik">🚀 GitHub</a></li>
+    <li>
+      <a target="_blank" href="https://www.facebook.com/dkotik"
+        >📖 Facebook</a
+      >
+    </li>
+    <li>
+      <a target="_blank" href="https://x.com/dkotik"
+        >✖ Twitter</a
+      >
+    </li>
+    <li>
+      <a target="_blank" href="https://bsky.app/profile/dkotik.com"
+        >🦋 Blue Sky</a
+      >
+    </li>
+  </ul>
+
+  <p>
+    Contact form will be added soon.
+  </p>
+
+  <ButtonLedge>
+    <a href="/" title="Return to home page.">Back</a>
+  </ButtonLedge>
+</Default>
+
+<style>
+  ul {
+    padding: 0 0 0 1em;
+  }
+
+  ul.links {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: 1px dashed #a0a5f5;
+    border-bottom: 1px dashed #a0a5f5;
+  }
+
+  h1 + ul > li {
+    font-size: 110%;
+  }
+
+  ul.link li {
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
