@@ -1,0 +1,38 @@
+---
+import Default from "../layouts/Default.astro";
+import ButtonLedge from "../layouts/fragments/buttonledge.astro";
+---
+
+<Default
+  title="Inspiration"
+  description="The list of people, projects, and books that inspire me."
+  keywords="inspiration, people, projects, books"
+  class="frontpage"
+>
+  <h1>Inspiring People</h1>
+
+  <ul>
+    <li>
+      Jesus Christ
+    </li>
+    <li>
+      Jacob Baradaeus
+    </li>
+    <li>
+      Richard Hipp
+    </li>
+    <li>
+      Fabrice Bellard
+    </li>
+  </ul>
+
+  <ButtonLedge>
+    <a href="/" title="return to home page">Back</a>
+  </ButtonLedge>
+</Default>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
