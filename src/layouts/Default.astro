@@ -16,8 +16,9 @@ keywords={Astro.props.keywords}
 import "./style.sass";
 ---
 
-<html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>{Astro.props.title}</title>
     <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> -->
@@ -37,6 +38,7 @@ import "./style.sass";
     <meta property="og:url" content="https://dkotik.com/" name="og:url" />
     <meta property="og:type" content="website" name="og:type" />
     <meta property="og:title" content={Astro.props.title} name="og:title" />
+    <meta name="twitter:site" content="@dkotik">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={Astro.props.title} />
     <meta name="twitter:description" content={Astro.props.description} />
