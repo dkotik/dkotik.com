@@ -1,4 +1,24 @@
 import { defineConfig } from 'astro/config';
 
+import playformCompress from "@playform/compress";
+
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [playformCompress({
+  		// Exclude: [
+			// 	"File.png",
+			// 	(File: string) =>
+			// 		File === "./Target/Favicon/Image/safari-pinned-tab.svg",
+			// ],
+			CSS: true,
+			HTML: {
+				"html-minifier-terser": {
+					removeAttributeQuotes: true,
+				},
+			},
+			Image: true,
+			JavaScript: true,
+			JSON: true,
+			SVG: true
+		})]
+});
