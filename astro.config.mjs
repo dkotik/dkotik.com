@@ -1,11 +1,17 @@
 import { defineConfig } from 'astro/config';
 import playformCompress from "@playform/compress";
-
 import playformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [playformCompress({
+  integrations: [
+    playformInline({ // inline CSS for faster load
+      compress: true,
+      preloadFonts: true,
+      inlineFonts: false,
+      mergeStylesheets: true,
+    }),
+    playformCompress({
     // Exclude: [
     // 	"File.png",
     // 	(File: string) =>
@@ -21,5 +27,6 @@ export default defineConfig({
     JavaScript: true,
     JSON: true,
     SVG: true
-  }), playformInline()]
+    })
+  ]
 });
