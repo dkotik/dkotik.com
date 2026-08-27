@@ -28,21 +28,24 @@ import "./style.sass";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content={Astro.props.keywords} />
     <link rel="image_src" href="/img/share.png" />
-    <meta property="og:image" content="/img/share.png" name="og:image" />
+    <meta property="og:image" content="/img/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="fb:app_id" content="966242223397117" name="fb:app_id" />
     <meta
       property="og:description"
       content={Astro.props.description}
-      name="og:description"
     />
-    <meta property="og:url" content="https://dkotik.com/" name="og:url" />
-    <meta property="og:type" content="website" name="og:type" />
-    <meta property="og:title" content={Astro.props.title} name="og:title" />
+    <meta property="og:url" content="https://dkotik.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={Astro.props.title} />
     <meta name="twitter:site" content="@dkotik">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={Astro.props.title} />
     <meta name="twitter:description" content={Astro.props.description} />
-    <meta name="twitter:image" content="/img/share.png" />
+    <meta name="twitter:image" content="/img/og.jpg" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
   </head>
   <body class={Astro.props.class || "page"}>
     <slot name="hero">

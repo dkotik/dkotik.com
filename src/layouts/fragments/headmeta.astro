@@ -20,24 +20,43 @@ const title = Astro.props.title
 <meta charset="utf-8">
 <meta name="color-scheme" content="dark" />
 <SEO
-  title={ title } // browser tab
+  title={ title }
   description={ Astro.props.description }
   openGraph={{
     basic: {
-        title: title,
-        "type": "website",
-        // image: cardImage
+      image: "img/share.png",
+      title: title,
+      "type": "website"
     },
     image: {
-        alt: title
+      url: "/img/og.jpg",
+      width: 1200,
+      height: 630,
+      alt: title
     }
   }}
   extend={{
-      meta: [
-        {
-            name: "keywords",
-            content: Astro.props.keywords?.join(", ")
-        }
-      ]
+    meta: [
+      {
+        name: "keywords",
+        content: Astro.props.keywords?.join(", ")
+      },
+      {
+        property: "og:description",
+        content: Astro.props.description
+      },
+      {
+        name: "twitter:image",
+        content: "/assets/og.jpg"
+      },
+      {
+        name: "twitter:title",
+        content: title
+      },
+      {
+        name: "twitter:description",
+        content: Astro.props.description
+      }
+    ]
   }} />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">

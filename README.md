@@ -1,3 +1,13 @@
+# TODO
+
+- [ ] Updgrade node
+  ```yaml
+        - name: Set up Node.js
+          uses: actions/setup-node@v7
+          with:
+            node-version: '>=22.12.0'
+  ```
+
 # Astro Starter Kit: Minimal
 
 ```sh
