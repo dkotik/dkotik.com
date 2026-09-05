@@ -21,14 +21,16 @@ import "./style.sass";
     <meta charset="utf-8" />
     <title>{Astro.props.title}</title>
     <link rel="canonical" href={ "https://dkotik.com"+Astro.url.pathname }>
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> -->
     <meta name="title" content={Astro.props.title} />
     <meta name="description" content={Astro.props.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content={Astro.props.keywords} />
-    <link rel="image_src" href="/img/share.png" />
     <meta property="og:image" content="/img/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
