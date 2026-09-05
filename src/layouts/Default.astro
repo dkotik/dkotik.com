@@ -20,7 +20,7 @@ import "./style.sass";
   <head>
     <meta charset="utf-8" />
     <title>{Astro.props.title}</title>
-    <link rel="canonical" href={ "https://dkotik.com"+Astro.url.pathname }>
+    <link rel="canonical" href={ Astro.site+Astro.url.pathname.replace(/^\/+/, '') }>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -31,7 +31,7 @@ import "./style.sass";
     <meta name="description" content={Astro.props.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content={Astro.props.keywords} />
-    <meta property="og:image" content={ Astro.url.origin + "/img/og.jpg"} />
+    <meta property="og:image" content={ Astro.site + "img/og.jpg"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Dima sitting on a park bench by a lake." />
@@ -40,14 +40,14 @@ import "./style.sass";
       property="og:description"
       content={Astro.props.description}
     />
-    <meta property="og:url" content="https://dkotik.com/" />
+    <meta property="og:url" content={ Astro.site } />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={Astro.props.title} />
     <meta name="twitter:site" content="@dkotik">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={Astro.props.title} />
     <meta name="twitter:description" content={Astro.props.description} />
-    <meta name="twitter:image" content={ Astro.url.origin + "/img/og.jpg"} />
+    <meta name="twitter:image" content={ Astro.site + "img/og.jpg"} />
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="630" />
     <meta name="twitter:image:alt" content="Dima sitting on a park bench by a lake." />

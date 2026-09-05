@@ -4,6 +4,7 @@ import playformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://dkotik.com",
   integrations: [
     playformInline({ // inline CSS for faster load
       compress: true,
