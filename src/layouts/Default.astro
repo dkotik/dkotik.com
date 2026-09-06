@@ -14,13 +14,15 @@ description={Astro.props.description}
 keywords={Astro.props.keywords}
 /> */
 import "./style.sass";
+
+const canonicalURL = Astro.site+Astro.url.pathname.replace(/^\/+/, '')
 ---
 
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <title>{Astro.props.title}</title>
-    <link rel="canonical" href={ Astro.site+Astro.url.pathname.replace(/^\/+/, '') }>
+    <link rel="canonical" href={ canonicalURL }>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -35,14 +37,15 @@ import "./style.sass";
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Dima sitting on a park bench by a lake." />
-    <meta property="fb:app_id" content="966242223397117" name="fb:app_id" />
+    <meta property="fb:app_id" content="966242223397117" />
     <meta
       property="og:description"
       content={Astro.props.description}
     />
-    <meta property="og:url" content={ Astro.site } />
+    <meta property="og:url" content={ canonicalURL } />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={Astro.props.title} />
+    <meta name="twitter:url" content={ canonicalURL }>
     <meta name="twitter:site" content="@dkotik">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={Astro.props.title} />
